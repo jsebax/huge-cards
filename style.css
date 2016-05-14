@@ -1,0 +1,159 @@
+@font-face {
+  font-family: 'HUGEAvantGardeBold';
+  src: url('./resources/fonts/huge_agb_v5-webfont.eot?#iefix') format('embedded-opentype'), url('./resources/fonts/huge_agb_v5-webfont.woff') format('woff'), url('./resources/fonts/huge_agb_v5-webfont.ttf') format('truetype'), url('./resources/fonts/huge_agb_v5-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'GalaxieCopernicusBookItalic';
+  src: url('./resources/fonts/GalaxieCopernicus-BookItalic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CopernicusBook';
+  src: url('./resources/fonts/Copernicus-Book.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CopernicusExtrabold';
+  src: url('./resources/fonts/Copernicus-Extrabold.otf') format('truetype');
+}
+
+body, html {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(to bottom, #f6f7fc 0%, #d5e1e8 40%);
+}
+
+.container {
+  width: 320px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 2000px;
+  cursor: pointer;
+}
+
+#card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  border-radius: 5px;
+}
+
+#card div {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+
+.front {
+  box-shadow: 0 45px 100px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+}
+
+.back {
+  position: absolute;
+  background-color: #fff;
+  transform: rotateY( 180deg );
+  overflow: hidden;
+}
+
+.front .shine {
+  position: absolute;
+  background: linear-gradient(90deg, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, 0) 60%);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.front div[class*="layer-"] {
+  position: absolute;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transition: 0.1s;
+}
+
+.front .layer-1 {
+  background-image: url('h1.png');
+}
+
+.front .layer-2 {
+  background-image: url('h2.png');
+}
+
+.front .layer-3 {
+  background-image: url('h3.png');
+}
+
+.front .layer-4 {
+  background-image: url('h4.png');
+}
+
+.front .layer-5 {
+  background-image: url('h5.png');
+}
+
+.front .layer-6 {
+  background-image: url('subline.png');
+}
+
+.huge h2 {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  font-family: 'HUGEAvantGardeBold', sans-serif;
+  letter-spacing: -0.06em;
+}
+
+.values-list ul {
+  list-style-image: url('triangle.png');
+  margin: 0;
+  position: absolute;
+  top: 100px;
+  left: 43px;
+  line-height: 2;
+}
+
+.values-list ul li {
+  font-family: 'CopernicusBook', sans-serif;
+  letter-spacing: -0.06em;
+}
+
+#card div .message {
+  width: 250px;
+  height: 120px;
+  position: absolute;
+  top: 350px;
+  left: 33px;
+  background-color: #F7F7F7;
+  border: 2px solid #000000;
+  font-family: 'CopernicusBook', sans-serif;
+  letter-spacing: -0.06em;
+}
+
+.message .to {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+
+.message .msg {
+  position: absolute;
+  left: 10px;
+  top: 30px;
+}
+
+.message .sign {
+  position: absolute;
+  left: 10px;
+  top: 95px;
+}
