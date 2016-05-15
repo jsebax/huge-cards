@@ -27,11 +27,25 @@ body {
   background-color: #C1C1C1;
 }
 
+.heading {
+  position: absolute;
+  left: 50%;
+  font-family: 'HUGEAvantGardeBold', sans-serif;
+  letter-spacing: -0.06em;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.heading p {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
 .container {
   width: 320px;
   height: 500px;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   perspective: 2000px;

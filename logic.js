@@ -36,7 +36,7 @@ var timelineValues = new TimelineMax({paused: true, delay: .5, onComplete: funct
 timelineValues
   .from(huge, 1.5, {opacity: 0, ease: Power2.easeOut}, 'start')
   .staggerFrom(values.children, 1, {opacity: 0, x: '-=100', ease: Power2.easeOut}, .3, 'start+=.5')
-  .from(message, 1, {opacity: 0, scale: 0, ease: Back.easeOut.config(1.7)}, '-=.5')
+  .from(message, 1.5, {opacity: 0,  ease: Power2.easeOut})
   ;
 
 container.addEventListener('mousedown', flipCard);
